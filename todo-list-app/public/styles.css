@@ -1,0 +1,110 @@
+@keyframes backgroundColorChange {
+    0% { background-color: #afd5ee; }
+    25% { background-color: #d0e0d6; }
+    50% { background-color: #d7d4c5; }
+    75% { background-color: #d7c7c4; }
+    100% { background-color: #b9cfde; }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    animation: backgroundColorChange 10s linear infinite; 
+}
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    color: white;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2.4px 10px 15px rgb(11, 11, 11);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#task-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: hsl(178, 54%, 43%);
+    color: #fff;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background-color: #074649;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-title {
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+}
+
+.task-title:not([readonly]) {
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.task-actions button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.edit-btn, .save-btn {
+    background-color: #005396;
+}
+
+.delete-btn {
+    background-color: #e10f00e2;
+}
+
+.toggle-btn {
+    background-color: #FF9800;
+}
