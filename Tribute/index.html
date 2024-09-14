@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Sushant Singh Rajput</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary-color: #828e00;
+            --secondary-color: #61bbde;
+            --accent-color: #00189f;
+            --text-color: #000000;
+            --bg-color: #f0f7f4;
+        }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            display: block;
+            border: 4px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .section {
+            margin: 40px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        #bio {
+            position: relative;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        #bio::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+            opacity: 0.1;
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #bio p {
+            position: relative;
+            z-index: 1;
+        }
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .achievement-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: linear-gradient(45deg, transparent, var(--accent-color), transparent);
+            opacity: 0.2;
+            transition: transform 0.5s ease;
+        }
+        .achievement-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .achievement-card:hover::before {
+            transform: translate(100%, 100%);
+        }
+        .achievement-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: var(--bg-color);
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--primary-color);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--primary-color);
+        }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--primary-color);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--primary-color) transparent transparent;
+        }
+        .right::after {
+            left: -16px;
+        }
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .timeline-content:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        @keyframes floatBubble {
+            0% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.1); }
+            100% { transform: translateY(0) scale(1); }
+        }
+        .bubble {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: floatBubble 7s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tribute to Sushant Singh Rajput</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS4BnSMdirtBQzCWLpJ_JQ3mttLeYegHm8YA&s" alt="Sushant Singh Rajput" class="profile-img">
+    </header>
+    <div class="container">
+        <section class="section" id="bio">
+            <h2>Biography</h2>
+            <p>Sushant Singh Rajput (21 January 1986 - 14 June 2020) was an Indian actor known for his work in Hindi cinema. He started his career as a television actor before making a successful transition to Bollywood. Rajput was not only a talented actor but also a passionate advocate for science and technology.</p>
+        </section>
+        
+        <section class="section" id="achievements">
+            <h2>Achievements</h2>
+            <div class="achievements">
+                <div class="achievement-card">
+                    <h3>Academic Excellence</h3>
+                    <p>National Olympiad Winner in Physics</p>
+                    <p>All India 7th rank in DCE Entrance Exam</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Television Success</h3>
+                    <p>Lead role in "Pavitra Rishta" (2009-2011)</p>
+                    <p>Winner of Indian Television Academy Awards</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Bollywood Breakthrough</h3>
+                    <p>Critically acclaimed debut in "Kai Po Che!" (2013)</p>
+                    <p>Filmfare Award nomination for Best Male Debut</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Iconic Performances</h3>
+                    <p>Portrayal of M.S. Dhoni in the biopic (2016)</p>
+                    <p>Lead role in the hit film "Chhichhore" (2019)</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="timeline">
+            <h2>Career Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2008</h3>
+                        <p>Television debut with "Kis Desh Mein Hai Meraa Dil"</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2009-2011</h3>
+                        <p>Lead role in "Pavitra Rishta", gaining nationwide fame</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2013</h3>
+                        <p>Bollywood debut with "Kai Po Che!"</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2016</h3>
+                        <p>Starred in "M.S. Dhoni: The Untold Story"</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2019</h3>
+                        <p>Lead role in "Chhichhore", a commercial and critical success</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2020</h3>
+                        <p>Posthumous release of "Dil Bechara"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="legacy">
+            <h2>Legacy</h2>
+            <p>Sushant Singh Rajput's untimely demise left a void in Indian cinema. He is remembered not only for his acting prowess but also for his intellectual pursuits, love for astronomy, and philanthropic efforts. His journey from an engineering student to a beloved actor continues to inspire many aspiring artists.</p>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Create floating bubbles in header
+            const header = document.querySelector('header');
+            for (let i = 0; i < 20; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                bubble.style.left = `${Math.random() * 100}%`;
+                bubble.style.top = `${Math.random() * 100}%`;
+                bubble.style.width = `${Math.random() * 50 + 10}px`;
+                bubble.style.height = bubble.style.width;
+                bubble.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                bubble.style.animationDelay = `${Math.random() * 5}s`;
+                header.appendChild(bubble);
+            }
+
+            // Scroll animation for sections
+            const sections = document.querySelectorAll('.section');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+
+            // Scroll animation for timeline items
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            let delay = 0;
+
+            const timelineObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, delay);
+                        delay += 200; // Increase delay for each item
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            timelineItems.forEach(item => {
+                timelineObserver.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
