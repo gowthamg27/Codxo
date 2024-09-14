@@ -1,0 +1,125 @@
+[
+  
+
+  {
+    "name": "Weather App",
+    "desc": "Using JavaScript, I built a real-time weather app and added future prediction.",
+    "image": "weatherapp",
+    "category": "javascript",
+    "links": {
+      "view": "https://www.linkedin.com/posts/gowthamg27_codxo-webdevelopment-internship-activity-7240327465003327488-Z83a?utm_source=share&utm_medium=member_desktop",
+      "code": "https://github.com/gowthamg27/Codxo/tree/2249e37f188d848fa190f4e08b947d452de53060/Weather%20App"
+    }
+  },
+  {
+    "name": "To Do list",
+    "desc": "Mongodb is used to store data, and the backend is built using Node.js and Express.js, while the frontend is built using basic JavaScript, HTML, and CSS",
+    "image": "todolist",
+    "category": "javascript",
+    "links": {
+      "view": "https://www.linkedin.com/posts/gowthamg27_codxo-webdevelopment-internship-activity-7240420469487591424-Kn61?utm_source=share&utm_medium=member_desktop",
+      "code": "https://github.com/gowthamg27/Codxo/tree/2249e37f188d848fa190f4e08b947d452de53060/todo-list-app"
+    }
+  },
+  {
+    "name": "Expense Tracker",
+    "desc": "this build using Mongodb is used to store data, and the backend is built using Node.js and Express.js, while the frontend is built using basic JavaScript, HTML, and CSS.",
+    "image": "expense-tracker",
+    "category": "javascript",
+    "links": {
+      "view": "https://www.linkedin.com/posts/gowthamg27_codxo-webdevelopment-internship-activity-7240414372190134272-pJ7P?utm_source=share&utm_medium=member_desktop",
+      "code": "https://www.linkedin.com/posts/gowthamg27_codxo-webdevelopment-internship-activity-7240414372190134272-pJ7P?utm_source=share&utm_medium=member_desktop"
+    }
+  },
+  {
+    "name": "E-commerce Design",
+    "desc": "This project was designed in Figma,its robust prototyping features to create an interactive and engaging user experience.",
+    "image": "ecommerce",
+    "category": "UiUx",
+    "links": {
+      "view": "https://www.linkedin.com/posts/gowthamg27_uiuxdesign-figma-onlineshopping-activity-7140754937591808000-xiOJ?utm_source=share&utm_medium=member_desktop",
+      "code": "https://github.com/gowthamg27/shopping-app"
+    }
+  },
+  {
+    "name": "Netflix App",
+    "desc": "Basic Html and Css are used to build the netflix clone app",
+    "image": "netflix",
+    "category": "html,css",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+
+  {
+    "name": "Burgerking Website Design ",
+    "desc": "This project was designed in Figma,its robust prototyping features to create an interactive and engaging user experience.",
+    "image": "burgerking",
+    "category": "UiUx",
+    "links": {
+      "view": "https://www.linkedin.com/posts/gowthamg27_figma-uiandux-webdesign-activity-7122608144370831360-majO?utm_source=share&utm_medium=member_desktop",
+      "code": "https://github.com/gowthamg27/burgerKing-uiux"
+    }
+  },
+  {
+    "name": "MenuCard",
+    "desc": "Simple landing page for menu card using Html, Css and javascript..",
+    "image": "menucard",
+    "category": "javascript",
+    "links": {
+      "view": "https://www.linkedin.com/posts/gowthamg27_html-css-activity-7112115798407614464-b29B?utm_source=share&utm_medium=member_desktop",
+      "code": "https://github.com/gowthamg27/Menu-Card/tree/main"
+    }
+  },
+  {
+    "name": "Notepad",
+    "desc": "Basic of Javascript using build the notepad Application.",
+    "image": "notepad",
+    "category": "javascript",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Portfolio Website",
+    "desc": "Personal Portfolio Website. Don't Need Much Info About It, Just Scroll Down. You're Here Only!",
+    "image": "portfolio",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Foodshop Website Design",
+    "desc": "This project was designed in Figma,its robust prototyping features to create an interactive and engaging user experience.",
+    "image": "onlineshop",
+    "category": "UiUx",
+    "links": {
+      "view": "https://www.linkedin.com/posts/gowthamg27_uiuxdesign-uichallenge-uiuxdesigning-activity-7152692595586990080-o-sr?utm_source=share&utm_medium=member_desktop",
+      "code": "https://github.com/gowthamg27/e-commerce-UIUX"
+    }
+  },
+  {
+    "name": "Music Player App",
+    "desc": "Using basic of javascript,Html and css used to build this player..",
+    "image": "musicplayer",
+    "category": "javascript",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/gowthamg27/Music_Player"
+    }
+  },
+  {
+    "name": "Counter",
+    "desc": "basic javaScript based project.",
+    "image": "counter",
+    "category": "javascript",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/gowthamg27/GuessNumber_and_ToDolist"
+    }
+  }
+]
